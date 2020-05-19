@@ -1,0 +1,23 @@
+{
+  "name": "sass-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/ --output css/ --output-style compressed --watch --source-map true"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shigasy/sass-example.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shigasy/sass-example/issues"
+  },
+  "homepage": "https://github.com/shigasy/sass-example#readme",
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  }
+}

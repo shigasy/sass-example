@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+.header {
+  box-sizing: border-box;
+  width: 100%;
+  &-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1024px;
+    height: 60px;
+    margin: 0 auto;
+    font-size: 1.2em;
+  }
+  &-nav {
+    display: flex;
+    align-items: center;
+  }
+  &-nav-item {
+    display: flex;
+    align-items: center;
+    margin-left: 16px;
+  }
+  &-button {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 0.5em 1.2em;
+    font-size: 12px;
+    text-decoration: none;
+    cursor: pointer;
+    user-select: none;
+  }
+  &-login {
+    color: #999;
+  }
+  &-post {
+    font-weight: bold;
+    color: $color-white;
+    background: #00b5ad;
+    border: 1px #00b5ad solid;
+    border-radius: 3px;
+  }
+  @include media-sp {
+    &-post {
+      display: none;
+    }
+  }
+}

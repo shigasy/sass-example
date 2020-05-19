@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+// -----------------------------------------------------
+// Media Query
+// -----------------------------------------------------
+
+// ----
+// * ex)
+//   @include media-sp {}
+//   @include media-pc {}
+// ----
+@mixin media-sp {
+  @media screen and (max-width: $break-point) {
+    @content;
+  }
+}
+
+@mixin media-pc {
+  @media print, screen and (min-width: $break-point + 1) {
+    @content;
+  }
+}
+
+// // レイアウト幅
+// $layout-width-inner: 1180px;
+
+// // ブレークポイント
+// $breakpoints: (
+//   "sp": "screen and (max-width: 767px)",
+//   "tab": "screen and (max-width: #{$layout-width-inner - 1px})",
+//   "pc": "screen and (min-width: #{$layout-width-inner})",
+// );
+
+// // メディアクエリー
+// @mixin mq($breakpoint: sp) {
+
+//   @media #{map-get($breakpoints, $breakpoint)} {
+
+//     @content;
+//   }
+// }
+
+// -----------------------------------------------------
+// Position
+// -----------------------------------------------------
+@mixin center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// -----------------------------------------------------
+// Text
+// -----------------------------------------------------
+
+@mixin font-sans {
+  font-family: -apple-system, BlinkMacSystemFont, YuGothic, "Hiragino Sans",
+    "Meiryo", sans-serif;
+}
+
+@mixin hide-text {
+  font: 0 / 0;
+  color: transparent;
+}
