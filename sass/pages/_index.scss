@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+.link {
+  @include link-colors;
+  // @include center;
+}
+.center {
+  position: relative;
+}
+.background {
+  @include bg-gradient($color: $color-beige);
+  height: 200px;
+}
+.input-text {
+  @include none-appearance;
+}
+.triangle {
+  @include triangle;
+}
+
+.hover {
+  @include hover-fade;
+}
+
+.border {
+  @include b;
+}
+.mt {
+  @include mt;
+}
+
+.rem-test {
+  font-size: 1.4rem;
+}
+.rem-test2 {
+  font-size: 1rem;
+}
+
+.px-test {
+  font-size: 16px;
+}
+
+.em-test {
+  font-size: 1.6em;
+}

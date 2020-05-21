@@ -1,16 +1,31 @@
 @charset "utf-8";
 
-
-.button {
+%button {
   display: inline-block;
+  width: 100%;
   padding: 0.4em 1.6em;
   font-size: 0.8em;
-  color: #00b5ad;
   text-decoration: none;
   user-select: none;
-  border: 1px #00b5ad solid;
   border-radius: 3px;
   transition: 0.4s ease;
+}
+
+.button-primary {
+  @extend %button;
+  color: $color-blue;
+  @include b($color-blue);
+
+  &:hover {
+    color: $color-white;
+    background: $color-blue;
+  }
+}
+
+.button-secondary {
+  @extend %button;
+  color: #00b5ad;
+  border: 1px #00b5ad solid;
 
   &:hover {
     color: $color-white;
