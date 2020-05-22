@@ -217,3 +217,14 @@
   }
   border-style: solid;
 }
+
+$layer: (
+  modal: 100,
+  header: 20,
+  tooltip: 10,
+  default: 1
+);
+
+@mixin z-index($key) {
+  z-index: map-get($layer, $key: $key)
+}
